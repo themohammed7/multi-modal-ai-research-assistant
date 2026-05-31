@@ -48,7 +48,7 @@ app.include_router(
     audio_router,
     prefix="/audio",
     tags=["Audio"]
-# )
+)
 
 # PDF Assistant
 app.include_router(

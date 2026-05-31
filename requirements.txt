@@ -57,7 +57,7 @@ pydub
 ffmpeg-python
 yt-dlp
 
-audioop-lts
+# audioop-lts
 
 # =========================================================
 
