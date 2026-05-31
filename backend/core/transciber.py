@@ -8,8 +8,13 @@ load_dotenv()
 
 FFMPEG_PATH = os.getenv("FFMPEG_PATH")
 
-os.environ["PATH"] += os.pathsep + FFMPEG_PATH
-AudioSegment.converter = os.path.join(FFMPEG_PATH, "ffmpeg.exe")
+if FFMPEG_PATH:
+    os.environ["PATH"] += os.pathsep + FFMPEG_PATH
+
+    AudioSegment.converter = os.path.join(
+        FFMPEG_PATH,
+        "ffmpeg.exe"
+    )
 
 # Sarvam's sync STT-translate API rejects audio longer than 30s.
 # We slice each chunk into 25s pieces (with a 5s safety margin) before sending.

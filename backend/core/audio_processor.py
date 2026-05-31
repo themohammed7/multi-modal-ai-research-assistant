@@ -15,12 +15,13 @@ load_dotenv()
 
 FFMPEG_PATH = os.getenv("FFMPEG_PATH")
 
-os.environ["PATH"] += os.pathsep + FFMPEG_PATH
+if FFMPEG_PATH:
+    os.environ["PATH"] += os.pathsep + FFMPEG_PATH
 
-AudioSegment.converter = os.path.join(
-    FFMPEG_PATH,
-    "ffmpeg.exe"
-)
+    AudioSegment.converter = os.path.join(
+        FFMPEG_PATH,
+        "ffmpeg.exe"
+    )
 
 
 
