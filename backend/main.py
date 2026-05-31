@@ -8,7 +8,7 @@ from backend.database import engine
 from backend.routes.chat_routes import router as chat_router
 
 # print("Importing audio routes")
-from backend.routes.audio_routes import router as audio_router
+# from backend.routes.audio_routes import router as audio_router
 
 # print("Importing pdf routes")
 from backend.routes.pdf_routes import router as pdf_router
@@ -44,11 +44,11 @@ app.include_router(
 )
 
 # Audio Assistant
-app.include_router(
-    audio_router,
-    prefix="/audio",
-    tags=["Audio"]
-)
+# app.include_router(
+#     audio_router,
+#     prefix="/audio",
+#     tags=["Audio"]
+# )
 
 # PDF Assistant
 app.include_router(
