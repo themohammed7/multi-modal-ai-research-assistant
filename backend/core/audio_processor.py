@@ -88,7 +88,7 @@ def convert_to_wav(input_path: str) -> str:
 
 def chunk_audio(
     wav_path: str,
-    chunk_seconds: int = 25
+    chunk_seconds: int = 45
 ) -> list:
 
     audio = AudioSegment.from_wav(wav_path)

@@ -48,10 +48,10 @@ unstructured
 # Audio Processing
 
 # =========================================================
-
-openai-whisper
-torch
-torchaudio
+groq
+# openai-whisper
+# torch
+# torchaudio
 
 pydub
 ffmpeg-python
