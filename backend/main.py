@@ -4,25 +4,25 @@ from fastapi.middleware.cors import CORSMiddleware
 from backend.database import Base
 from backend.database import engine
 
-print("Importing chat routes")
+# print("Importing chat routes")
 from backend.routes.chat_routes import router as chat_router
 
-print("Importing audio routes")
-from backend.routes.audio_routes import router as audio_router
+# print("Importing audio routes")
+# from backend.routes.audio_routes import router as audio_router
 
-print("Importing pdf routes")
+# print("Importing pdf routes")
 from backend.routes.pdf_routes import router as pdf_router
 
-print("Importing system routes")
+# print("Importing system routes")
 from backend.routes.system_routes import router as system_router
 
-print("All routes imported")
+# print("All routes imported")
 
-print("Creating database tables")
+# print("Creating database tables")
 Base.metadata.create_all(bind=engine)
-print("Database tables created")
+# print("Database tables created")
 
-print("Creating FastAPI app")
+# print("Creating FastAPI app")
 
 app = FastAPI(
     title="AI Assistant API"
@@ -44,11 +44,11 @@ app.include_router(
 )
 
 # Audio Assistant
-app.include_router(
-    audio_router,
-    prefix="/audio",
-    tags=["Audio"]
-)
+# app.include_router(
+#     audio_router,
+#     prefix="/audio",
+#     tags=["Audio"]
+# )
 
 # PDF Assistant
 app.include_router(
